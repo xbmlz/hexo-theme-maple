@@ -1,6 +1,5 @@
 {
-  "name": "hexo-theme-petrichor",
+  "name": "hexo-theme-maple",
   "version": "0.0.1",
-  "private": true,
-  "devDependencies": {}
+  "private": true
 }
