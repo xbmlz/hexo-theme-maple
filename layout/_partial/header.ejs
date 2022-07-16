@@ -1,0 +1,13 @@
+<header class="header">
+  <a href="<%- config.root %>" class="logo" focusable="false">
+    <img src="<%- theme.logo %>" alt="<%- config.title %>">
+  </a>
+  <nav class="nav">
+    <div class="spacer"></div>
+    <div class="right">
+        <% for (var i in theme.nav){ %>
+          <a class="item" href="<%- url_for(theme.nav[i]) %>"><%= i %></a>
+        <% } %>
+    </div>
+  </nav>
+</header>

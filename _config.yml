@@ -1,0 +1,10 @@
+# Header
+nav:
+  Home: /
+  Archives: /archives
+
+rss: /atom.xml
+
+favicon: /favicon.png
+
+logo: /images/logo.svg

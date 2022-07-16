@@ -1,0 +1,43 @@
+.header
+  z-index: 40
+  .logo
+    width: 2.5rem
+    height: 2.5rem
+    margin: 1.5rem
+    user-select: none
+    outline: 2px solid transparent
+    outline-offset: 2px
+    @media (min-width: 1024px)
+      position: fixed
+
+      img
+        max-width: 100%
+        height: auto
+        isplay: block
+        vertical-align: middle
+
+  .nav
+    padding: 2rem
+    width: 100%
+    display: grid
+    grid-template-columns: auto max-content
+    box-sizing: border-box
+
+    .spacer
+      margin: auto
+
+    .right
+      display: grid
+      grid-gap: 1.2rem
+      grid-auto-flow: column
+
+    a
+      cursor: pointer
+      text-decoration: none
+      color: inherit
+      transition: opacity .2s ease
+      opacity: .6
+      outline: none
+      &:hover
+        opacity: 1
+        text-decoration-color: inherit

@@ -1,0 +1,9 @@
+<%- partial('_partial/head') %>
+<body>
+  <div id="app">
+    <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
+    <main class="container"><%- body %></main>
+    <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+  </div>
+</body>
+</html>
