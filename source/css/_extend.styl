@@ -9,3 +9,24 @@ html.dark
 
 body
   font-family: font-family
+
+*
+  scrollbar-color: scroll-bar-color bg-color
+
+::-webkit-scrollbar
+  width: 6px
+
+::-webkit-scrollbar:horizontal
+  height: 6px
+
+::-webkit-scrollbar-track, ::-webkit-scrollbar-corner
+  background: bg-color
+  border-radius: 10px
+
+::-webkit-scrollbar-thumb
+  background: scroll-bar-color
+  border-radius: 10px
+
+::-webkit-scrollbar-thumb:hover
+  background: scroll-bar-hover-color
+
