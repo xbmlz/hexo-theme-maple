@@ -10,3 +10,10 @@ rss: /atom.xml
 favicon: /favicon.png
 
 logo: /images/logo.svg
+
+# stylesheets loaded in the <head>
+stylesheets:
+  - /css/style.css
+
+scripts:
+  - /js/index.js

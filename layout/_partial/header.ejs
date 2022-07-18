@@ -8,20 +8,9 @@
       <% for (var i in theme.nav){ %>
       <a class="item" href="<%- url_for(theme.nav[i]) %>"><%= i %></a>
       <% } %>
-      <a href="">
-        <span class="iconify" data-icon="uil:github-alt" data-inline="false"></span>
-      </a>
-      <a href="">
-        <span class="iconify" data-icon="ri:weibo-line" data-inline="false"></span>
-      </a>
-      <a href="">
-        <span class="iconify" data-icon="feather:twitter" data-inline="false"></span>
-      </a>
-      <a href="">
-        <span class="iconify" data-icon="la:rss" data-inline="false"></span>
-      </a>
-      <a class="toggleDark" href="">
-        <span class="iconify" data-icon="ri:sun-line" data-inline="false"></span>
+      <a class="toggleDark" id="dark-mode">
+        <img src="<%- url_for('/images/sun.svg') %>" alt="sun" id="sun-icon" style="display: none">
+        <img src="<%- url_for('/images/moon.svg') %>" alt="sun" id="moon-icon" style="display: none">
       </a>
     </div>
   </nav>

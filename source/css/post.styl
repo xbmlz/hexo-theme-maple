@@ -1,5 +1,5 @@
 .post
-  color: post-color
+  color: var(--fg)
   max-width: 65ch
   font-size: 1rem
   line-height: 1.75
@@ -9,7 +9,12 @@
   margin-bottom: 2rem
 
 .post-title
+  color: var(--fg-deeper)
+  font-weight: 800
+  font-size: 2.25em
   margin-top: 0
+  margin-bottom: 0.8888889em
+  line-height: 1.1111111
 
 .post-meta
   opacity: 0.5
@@ -20,14 +25,14 @@
   &:last-child
     margin-bottom: 0
   h1
-    color: post-color-deeper
+    color: var(--fg-deeper)
     font-weight: 800
     font-size: 2.25em
     margin-top: 0
     margin-bottom: 0.8888889em
     line-height: 1.1111111
   h2
-    color: #222
+    color: inherit
     font-weight: 700
     font-size: 1.5em
     margin-top: 2em
@@ -57,7 +62,7 @@
     margin-bottom: 1.25em
 
   strong
-    color: post-color-deep
+    color: var(--fg-deep)
     font-weight: 600
 
   em
@@ -69,7 +74,7 @@
     margin: 1em 0
     padding: 1em 1.2em 1em 1.2em
     position: relative
-    color: rgba(#34495e, 0.8)
+    color: inherit
     border-left: 0.25rem solid #7d7d7d4d
     p
       margin 0
@@ -117,14 +122,16 @@
         left: 0
 
   a
-    color: post-color-deeper
+    color: var(--fg-deeper)
     text-decoration: none
     font-weight: 500
     text-decoration: none
     border-bottom: 1px solid rgba(125, 125, 125, 0.3)
     transition: border 0.3s ease-in-out
     &:hover
-      border-bottom: 1px solid post-color
+      border-bottom: 1px solid var(--fg)
+    // code
+    //   color: #111827;
 
   img
     margin-top: 2em
@@ -177,7 +184,7 @@
     margin: 0.5em 0
     border-radius: 0.3em
     overflow: auto
-    background-color: block-bg-color
+    // background-color: block-bg-color
     position relative
     table
       position relative
@@ -194,6 +201,28 @@
       font-size: block-font-size
       margin: 0
       padding: 0.2em
+      code
+
+        border-width: 0;
+        border-radius: 0;
+        padding: 0;
+        font-weight: 400;
+        color: inherit;
+        font-size: inherit;
+        font-family: inherit;
+        line-height: inherit;
+        &::before
+          content: none
+        &::after
+          content: none
+  code
+    color: var(--fg-deep)
+    font-weight: 600
+    font-size: 0.875em
+    &::before
+      content: "`"
+    &::after
+      content: "`"
 
 
 

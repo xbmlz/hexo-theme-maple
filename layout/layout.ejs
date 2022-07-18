@@ -1,9 +1,26 @@
-<%- partial('_partial/head') %>
+<!DOCTYPE html>
+<html lang="<%= config.language %>">
+
+<head>
+  <%- partial('_partial/head',{cache: true}) %>
+</head>
 <body>
+  <script>
+    (function() {
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+      const setting = localStorage.getItem('hexo-color-scheme') || 'auto'
+      if (setting === 'dark' || (prefersDark && setting !== 'light'))
+        document.documentElement.classList.toggle('dark', true)
+    })()
+  </script>
+
   <div id="app">
-    <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
-    <main class="container"><%- body %></main>
-    <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+    <%- partial('_partial/header', null, {cache: true}) %>
+    <main class="container">
+      <%- body %>
+    </main>
+    <%- partial('_partial/footer', null, {cache: true}) %>
   </div>
 </body>
+
 </html>

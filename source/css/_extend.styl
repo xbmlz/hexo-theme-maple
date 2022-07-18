@@ -1,17 +1,35 @@
-html
-  overflow: scroll
+:root
+  --c-bg: #fff
+  --c-scrollbar: #eee
+  --c-scrollbar-hover: #bbb
+  --fg: #555;
+  --fg-deep: #222;
+  --fg-deeper: #000;
+
 
 html
-  background-color: bg-color
+  background-color: var(--c-bg)
+  color: var(--fg)
+
 
 html.dark
-  background-color: bg-color-dark
+  --c-bg: #050505
+  --c-scrollbar: #111
+  --c-scrollbar-hover: #222
+  --fg: #bbb
+  --fg-deep: #ddd
+  --fg-deeper: #fff
+
+
+html
+  overflow: scroll
 
 body
   font-family: font-family
 
 *
-  scrollbar-color: scroll-bar-color bg-color
+  scrollbar-color: var(--c-scrollbar) var(--c-bg);
+
 
 ::-webkit-scrollbar
   width: 6px
@@ -20,15 +38,16 @@ body
   height: 6px
 
 ::-webkit-scrollbar-track, ::-webkit-scrollbar-corner
-  background: bg-color
+  background: var(--c-bg)
   border-radius: 10px
 
 ::-webkit-scrollbar-thumb
-  background: scroll-bar-color
+  background: var(--c-scrollbar)
   border-radius: 10px
 
 ::-webkit-scrollbar-thumb:hover
-  background: scroll-bar-hover-color
+  background: var(--c-scrollbar-hover)
+
 
 *, ::before, ::after
   box-sizing: border-box
