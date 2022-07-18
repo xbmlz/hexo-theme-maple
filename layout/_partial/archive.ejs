@@ -1,0 +1,17 @@
+<article>
+  <div class="archive">
+    <div class="">
+
+    </div>
+    <ul>
+      <% page.posts.each(function (post) { %>
+      <a href="<%- url_for(post.path) %>" class="item">
+        <li>
+          <div class="title"><%= post.title %></div>
+          <div class="time"><%- date(post.date, "YYYY-MM-DD") %></div>
+        </li>
+      </a>
+      <% }) %>
+    </ul>
+  </div>
+</article>

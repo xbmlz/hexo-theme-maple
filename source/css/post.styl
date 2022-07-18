@@ -1,3 +1,202 @@
-@import 'prose.css'
-@import 'base.css'
-@import 'md.css'
+.post
+  color: post-color
+  max-width: 65ch
+  font-size: 1rem
+  line-height: 1.75
+  margin: auto
+
+.post-header
+  margin-bottom: 2rem
+
+.post-title
+  margin-top: 0
+
+.post-meta
+  opacity: 0.5
+  margin-top: -0.5rem !important
+
+.post-content
+  margin: auto
+  &:last-child
+    margin-bottom: 0
+  h1
+    color: post-color-deeper
+    font-weight: 800
+    font-size: 2.25em
+    margin-top: 0
+    margin-bottom: 0.8888889em
+    line-height: 1.1111111
+  h2
+    color: #222
+    font-weight: 700
+    font-size: 1.5em
+    margin-top: 2em
+    margin-bottom: 1em
+    line-height: 1.3333333
+  h3
+    color: inherit
+    font-weight: 600
+    font-size: 1.25em
+    margin-top: 1.6em
+    margin-bottom: 0.6em
+    line-height: 1.6
+  h4
+    color: inherit
+    font-weight: 600
+    margin-top: 1.5em
+    margin-bottom: 0.5em
+    line-height: 1.5
+
+  hr
+    border-color: rgba(125,125,125,0.3)
+    margin-top: 3em
+    margin-bottom: 3em
+
+  p
+    margin-top: 1.25em
+    margin-bottom: 1.25em
+
+  strong
+    color: post-color-deep
+    font-weight: 600
+
+  em
+    color: inherit
+
+  blockquote
+    font-size: 1rem
+    display: block
+    margin: 1em 0
+    padding: 1em 1.2em 1em 1.2em
+    position: relative
+    color: rgba(#34495e, 0.8)
+    border-left: 0.25rem solid #7d7d7d4d
+    p
+      margin 0
+    footer
+      strong
+        margin-right 0.5em
+
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+    margin-top: 1.25em;
+    margin-bottom: 1.25em
+    list-style-type: none
+    >li
+      position: relative
+      padding-left: 1.75rem
+      margin-top: 0.5em
+      margin-bottom: 0.5em
+      &:before
+        content: ""
+        position: absolute
+        background-color: #d1d5db
+        border-radius: 50%
+        width: .375em
+        height: .375em
+        top: .6875em
+        left: .25em
+  ol
+    margin: 0
+    padding: 0
+    margin-top: 1.25em
+    margin-bottom: 0em
+    list-style-type: none
+    >li
+      position: relative
+      padding-left: 1.75em
+      margin-top: 0.5em;
+      margin-bottom: 0.5em
+      &:before
+        content: counter(list-item, var(--list-counter-style, decimal)) "."
+        position: absolute
+        font-weight: 400
+        color: #6b7280
+        left: 0
+
+  a
+    color: post-color-deeper
+    text-decoration: none
+    font-weight: 500
+    text-decoration: none
+    border-bottom: 1px solid rgba(125, 125, 125, 0.3)
+    transition: border 0.3s ease-in-out
+    &:hover
+      border-bottom: 1px solid post-color
+
+  img
+    margin-top: 2em
+    margin-bottom: 2em
+
+  table
+    width: 100%
+    table-layout: auto
+    text-align: left
+    margin-top: 2em
+    margin-bottom: 2em
+    font-size: 0.875em
+    line-height: 1.7142857
+    border-collapse: collapse
+    border-color: inherit
+    text-indent: 0
+    thead
+      color: #111827
+      font-weight: 600
+      border-bottom-width: 1px
+      border-bottom-color: #d1d5db
+      th
+        vertical-align: bottom
+        padding-right: 0.5714286em
+        padding-bottom: 0.5714286em
+        padding-left: 0.5714286em
+        &:first-child
+          padding-left: 0
+        &:last-child
+          padding-right: 0
+    tbody
+      tr
+        border-bottom-width: 1px
+        border-bottom-color: #e5e7eb
+        &:last-child
+          border-bottom-width: 0
+      td
+        vertical-align: top
+        padding-top: 0.5714286em
+        padding-right: 0.5714286em
+        padding-bottom: 0.5714286em
+        padding-left: 0.5714286em
+        &:first-child
+          padding-left: 0
+        &:last-child
+          padding-right: 0
+
+  figure.highlight
+    padding: 0 0.5em
+    margin: 0.5em 0
+    border-radius: 0.3em
+    overflow: auto
+    background-color: block-bg-color
+    position relative
+    table
+      position relative
+      margin: 0
+      padding: 0
+      border: 0
+      width: 100%
+      border-collapse: collapse
+    .gutter
+      width: 10px;
+      color: #d0d0d0;
+    pre
+      font-family: block-font-family
+      font-size: block-font-size
+      margin: 0
+      padding: 0.2em
+
+
+
+
+
+
