@@ -15,6 +15,9 @@ logo: /images/logo.svg
 # links
 links:
   Github: https://github.com/xbmlz
+  ZhiHu:
+  Twitter:
+  Weibo:
 
 
 # stylesheets loaded in the <head>
@@ -23,3 +26,4 @@ stylesheets:
 
 scripts:
   - /js/index.js
+  - /js/iconify.min.js

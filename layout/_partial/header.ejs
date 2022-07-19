@@ -8,9 +8,18 @@
       <% for (var i in theme.nav){ %>
       <a class="item" href="<%- url_for(theme.nav[i]) %>"><%= i %></a>
       <% } %>
+      <div class="links">
+        <% if (theme.links !== undefined) { %>
+          <% for (var key in theme.links) { %>
+            <a title="<%- key %>" href="<%= theme.links[key] %>" class="link-item">
+              <span class="iconify" data-icon="ri:<%- key.toLowerCase() %>-line"></span>
+            </a>
+          <% } %>
+        <% } %>
+      </div>
       <a class="toggleDark" id="dark-mode">
-        <img src="<%- url_for('/images/sun.svg') %>" alt="sun" id="sun-icon" style="display: none">
-        <img src="<%- url_for('/images/moon.svg') %>" alt="sun" id="moon-icon" style="display: none">
+        <span class="iconify" data-icon="ri:sun-line" id="sun-icon" style="display: none"></span>
+        <span class="iconify" data-icon="ri:moon-line" id="moon-icon" style="display: none"></span>
       </a>
     </div>
   </nav>

@@ -1,6 +1,5 @@
 .header
   z-index: 40
-  color: #374151
   .logo
     position: absolute
     width: 2.5rem
@@ -28,7 +27,7 @@
     .spacer
       margin: auto
 
-    .right
+    .right, .links
       display: grid
       grid-gap: 1.2rem
       grid-auto-flow: column
@@ -36,14 +35,14 @@
     a
       cursor: pointer
       text-decoration: none
-      color: var(--fg)
+      color: var(--fg-deeper)
       transition: opacity .2s ease
       opacity: .6
       outline: none
       &:hover
         opacity: 1
         text-decoration-color: inherit
-    img
+    svg
       width: 1.2rem
       height: 1.2rem
       vertical-align: text-bottom

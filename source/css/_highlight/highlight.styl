@@ -7,6 +7,9 @@ html:not(.dark) {
   --highlight-gutter       : #869194
   --highlight-class        : #2993a3
   --highlight-function     : #6c7834
+  --prism-builtin          : #ab5959
+  --prism-property         : #b58451
+  --prism-decorator        : #bd8f8f
 }
 
 html.dark {
@@ -18,6 +21,9 @@ html.dark {
   --highlight-gutter       : #869194
   --highlight-class        : #54b1bf
   --highlight-function     : #a1b567
+  --prism-builtin          : #858585
+  --prism-property         : #dd8e6e
+  --prism-decorator        : #bd8f8f
 }
 
 
@@ -61,7 +67,7 @@ html.dark {
       color: var(--highlight-string)
     }
 
-    .keyword {
+    .keyword, .doctag {
       color: var(--highlight-keyword)
     }
 
@@ -71,6 +77,18 @@ html.dark {
 
     .function_ {
       color: var(--highlight-function)
+    }
+
+    .tag>.name {
+      color: var(--prism-builtin)
+    }
+
+    .attr {
+      color: var(--prism-property)
+    }
+
+    .meta {
+      color: var(--prism-decorator)
     }
 	}
 }
