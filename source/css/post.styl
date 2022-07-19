@@ -1,12 +1,34 @@
 .post
   color: var(--fg)
-  max-width: 65ch
+  max-width: global-max-width
   font-size: 1rem
   line-height: 1.75
   margin: auto
 
 .post-header
   margin-bottom: 2rem
+
+.post-footer
+  margin-top: 2rem
+  margin-bottom: 2rem
+  a
+    color: var(--fg-deep)
+    font-family: block-font-family
+    opacity: 0.5
+    font-size: 1rem
+    line-height: 1.75
+    &:hover
+      opacity: 0.75
+
+.post-license
+  opacity: 0.5
+  display: flex
+  margin-top: 2.5rem
+  margin-bottom: 1.5rem
+  margin: auto
+  span
+    font-size: 0.875rem
+    line-height: 1.25rem
 
 .post-title
   color: var(--fg-deeper)
@@ -149,7 +171,7 @@
     border-color: inherit
     text-indent: 0
     thead
-      color: #111827
+      color: var(--fg-deeper)
       font-weight: 600
       border-bottom-width: 1px
       border-bottom-color: #d1d5db
@@ -202,7 +224,7 @@
       margin: 0
       padding: 0.2em
       code
-
+        font-family: block-font-family
         border-width: 0;
         border-radius: 0;
         padding: 0;
@@ -216,6 +238,7 @@
         &::after
           content: none
   code
+    font-family: block-font-family
     color: var(--fg-deep)
     font-weight: 600
     font-size: 0.875em

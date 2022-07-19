@@ -1,15 +1,21 @@
 # Header
 nav:
-  Home: /
-  Archives: /archives
-  Tags: /tags
-  About: /about
+  Posts: /archives
+  Categories: /category
+  Tags: /tag
 
 rss: /atom.xml
 
+# favicon
 favicon: /favicon.png
 
+# logo
 logo: /images/logo.svg
+
+# links
+links:
+  Github: https://github.com/xbmlz
+
 
 # stylesheets loaded in the <head>
 stylesheets:

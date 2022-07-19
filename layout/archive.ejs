@@ -1,0 +1,18 @@
+<div class="posts">
+  <% var last_year = ''; %>
+  <ul>
+    <% page.posts.each(function (post) { %>
+    <% var cur_year = post.date.year(); %>
+    <% if(last_year !== cur_year){ %>
+      <h2><%- cur_year %></h2>
+    <% last_year = cur_year; } %>
+    <a href="<%- url_for(post.path) %>" class="item">
+      <li>
+        <div class="title"><%= post.title %></div>
+        <div class="time"><%- date(post.date, "YYYY-MM-DD HH:MM") %></div>
+      </li>
+    </a>
+    <% }) %>
+  </ul>
+  <%- partial('_partial/paginator') %>
+</div>

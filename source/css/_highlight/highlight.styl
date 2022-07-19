@@ -1,36 +1,42 @@
-// Highlight Color
-$highlight-deletion     = #fdd
-$highlight-addition     = #dfd
-$highlight-background   = #f7f7f7
-$highlight-current-line = #efefef
-$highlight-selection    = #d6d6d6
-$highlight-foreground   = #4d4d4c
-$highlight-comment      = #8e908c
-$highlight-red          = #c82829
-$highlight-orange       = #f5871f
-$highlight-yellow       = #eab700
-$highlight-green        = #718c00
-$highlight-aqua         = #3e999f
-$highlight-blue         = #4271ae
-$highlight-purple       = #8959a8
-$highlight-gutter       = #869194
+html:not(.dark) {
+  --highlight-keyword      : #1c6b48
+  --highlight-background   : #fbfbfb
+  --highlight-comment      : #a0ada0
+  --highlight-foreground   : #393a34
+  --highlight-string       : #b56959
+  --highlight-gutter       : #869194
+  --highlight-class        : #2993a3
+  --highlight-function     : #6c7834
+}
+
+html.dark {
+  --highlight-keyword      : #4d9375
+  --highlight-background   : #111111
+  --highlight-comment      : #758575
+  --highlight-foreground   : #d4cfbf
+  --highlight-string       : #d48372
+  --highlight-gutter       : #869194
+  --highlight-class        : #54b1bf
+  --highlight-function     : #a1b567
+}
+
 
 .post-content {
   figure.highlight {
 		margin: 2em 0
-		background: $highlight-background
-		color: $highlight-foreground
+		background: var(--highlight-background)
+		color: var(--highlight-foreground)
 		font-size: 12px
 		overflow: scroll
 		overflow-y: hidden
 		overflow-x: auto
 
 		.gutter {
-			color: $hight-gutter
+			color: var(--hight-gutter)
 		}
 
 		pre {
-			background: $highlight-background
+			background: var(--highlight-background)
 			margin: 0
 		}
 	}
@@ -38,83 +44,33 @@ $highlight-gutter       = #869194
 	pre {
 		padding: 10px
 		overflow: auto
-		background: $highlight-background
-		font-family: Menlo,Monaco,Consolas,Courier New,monospace
+		background: var(--highlight-background)
+		font-family: Menlo, Monaco, Consolas, Courier New, monospace
 
 		code {
 			padding: 0
 		}
 	}
 
-
-
-	pre .deletion { background: $highlight-deletion }
-	pre .addition { background: $highlight-addition }
-	pre .meta     { color: $highlight-purple }
-
 	pre {
+		.comment {
+      color: var(--highlight-comment)
+    }
 
-		.comment { color: $highlight-comment }
+    .string {
+      color: var(--highlight-string)
+    }
 
-		.variable
-		.attribute
-		.tag
-		.regexp
-		.ruby .constant
-		.xml .tag .title
-		.xml .pi
-		.xml .doctype
-		.html .doctype
-		.css .id
-		.css .class
-		.css .pseudo {
-			color: $highlight-red
-		}
+    .keyword {
+      color: var(--highlight-keyword)
+    }
 
-		.number
-		.preprocessor
-		.built_in
-		.literal
-		.params
-		.constant
-		.command {
-			color: $highlight-orange
-		}
+    .class_ {
+      color: var(--highlight-class)
+    }
 
-		.ruby .class .title
-		.css .rules .attribute
-		.string
-		.value
-		.inheritance
-		.header
-		.ruby .symbol
-		.xml .cdata
-		.special
-		.number
-		.formula {
-			color: $highlight-green
-		}
-
-		.title
-		.css .hexcolor {
-			color: $highlight-aqua
-		}
-
-		.function
-		.python .decorator
-		.python .title
-		.ruby .function .title
-		.ruby .title .keyword
-		.perl .sub
-		.javascript .title
-		.coffeescript .title {
-			color: $highlight-blue
-		}
-
-		.keyword
-		.javascript .function {
-			color: $highlight-purple
-		}
-
+    .function_ {
+      color: var(--highlight-function)
+    }
 	}
 }
