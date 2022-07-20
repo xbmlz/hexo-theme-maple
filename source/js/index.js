@@ -1,67 +1,34 @@
+// declaraction of document.ready() function.
+(function () {
+  var ie = !!(window.attachEvent && !window.opera);
+  var wk = /webkit\/(\d+)/i.test(navigator.userAgent) && (RegExp.$1 < 525);
+  var fn = [];
+  var run = function () {
+    for (var i = 0; i < fn.length; i++) fn[i]();
+  };
+  var d = document;
+  d.ready = function (f) {
+    if (!ie && !wk && d.addEventListener)
+      return d.addEventListener('DOMContentLoaded', f, false);
+    if (fn.push(f) > 1) return;
+    if (ie)
+      (function () {
+        try {
+          d.documentElement.doScroll('left');
+          run();
+        } catch (err) {
+          setTimeout(arguments.callee, 0);
+        }
+      })();
+    else if (wk)
+      var t = setInterval(function () {
+        if (/^(loaded|complete)$/.test(d.readyState))
+          clearInterval(t), run();
+      }, 0);
+  };
+})();
 
-window.onload = () => {
-  let media = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)')
-  let isDark = () => {
-    const setting = localStorage.getItem('hexo-color-scheme') || 'auto'
-    if (setting === 'dark' || (media.matches && setting !== 'light')) {
-      return true
-    } else{
-      return false
-    }
-  }
-  // 切换为深色模式
-  let toggleDarkMode = () => {
-    document.documentElement.classList.toggle('dark', true)
-    document.getElementById('moon-icon').style.display = 'block'
-    document.getElementById('sun-icon').style.display = 'none'
-    setDarkMode('dark')
-  }
-  // 切换为浅色模式
-  let toggleLightMode = () => {
-    document.documentElement.classList.toggle('dark', false)
-    document.getElementById('moon-icon').style.display = 'none'
-    document.getElementById('sun-icon').style.display = 'block'
-    setDarkMode('light')
-  }
-  let setDarkMode = (scheme) => {
-    const darkMode = media.matches ? 'dark' : 'light'
-    if (darkMode !== scheme) {
-      localStorage.setItem('hexo-color-scheme', scheme)
-    } else{
-      localStorage.setItem('hexo-color-scheme', 'auto')
-    }
-  }
-  // 切换为自动模式
-  let updateMode = (e) => {
-    const setting = localStorage.getItem('hexo-color-scheme') || 'auto'
-    console.log(setting, e.matches)
-    if (setting === 'auto') {
-      if (e.matches) {
-        toggleDarkMode()
-      } else {
-        toggleLightMode()
-      }
-    }
-  }
+document.ready(() => {
 
-  // let media = getMedia()
-  if (typeof media.addEventListener === 'function') {
-    media.addEventListener('change', updateMode)
-  } else if (typeof media.addListener === 'function') {
-    media.addListener(updateMode)
-  }
-
-  if (isDark()) {
-    document.getElementById('moon-icon').style.display = 'block'
-  } else {
-    document.getElementById('sun-icon').style.display = 'block'
-  }
-
-  document.getElementById('moon-icon').addEventListener('click', () => {
-    toggleLightMode()
-  })
-  document.getElementById('sun-icon').addEventListener('click', () => {
-    toggleDarkMode()
-  })
-}
+})
 

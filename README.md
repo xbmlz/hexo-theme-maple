@@ -1,3 +1,9 @@
+## Features
+
+- 🎨 Automatically switched light and dark theme
+- ⚗️ [MathJax Support](http://docs.mathjax.org/en/latest/)
+- ⚡️ [Mermaid Support](https://mermaid-js.github.io/mermaid)
+
 ## Installation
 
 The simplest way to install is to clone the entire repository:

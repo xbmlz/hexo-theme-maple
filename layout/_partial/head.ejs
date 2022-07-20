@@ -49,3 +49,9 @@ if (is_archive()) {
     <script src="<%- url_for(url) %>"></script>
   <% }); %>
 <% } %>
+<%# mathjax support %>
+<%- partial('_plugins/mathjax.ejs') %>
+<%# mermaid support %>
+<%- partial('_plugins/mermaid.ejs') %>
+<%# theme support %>
+<%- partial('_plugins/theme.ejs') %>

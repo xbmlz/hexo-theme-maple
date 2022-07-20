@@ -23,7 +23,9 @@ links:
 # stylesheets loaded in the <head>
 stylesheets:
   - /css/style.css
+  - /lib/tocbot/tocbot.css
 
 scripts:
   - /js/index.js
   - /js/iconify.min.js
+  - /lib/tocbot/tocbot.min.js
