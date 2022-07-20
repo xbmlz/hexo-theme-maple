@@ -24,6 +24,7 @@ concise but not simple hexo theme
 - 📦 Out of the box - Almost zero configuration.
 - 🎨 Automatically switched light and dark theme.
 - 💻 Auto fit Mobile and Screen responsively.
+- 💹 Baidu/Google Analytics
 - ⚗️ [MathJax Support](http://docs.mathjax.org/en/latest/)
 - ⚡️ [Mermaid Support](https://mermaid-js.github.io/mermaid)
 
