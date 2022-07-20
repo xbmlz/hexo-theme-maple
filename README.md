@@ -21,8 +21,9 @@ concise but not simple hexo theme
 
 ## Features
 
-- 📦 Out of the box - Almost zero configuration
-- 🎨 Automatically switched light and dark theme
+- 📦 Out of the box - Almost zero configuration.
+- 🎨 Automatically switched light and dark theme.
+- 💻 Auto fit Mobile and Screen responsively.
 - ⚗️ [MathJax Support](http://docs.mathjax.org/en/latest/)
 - ⚡️ [Mermaid Support](https://mermaid-js.github.io/mermaid)
 
@@ -68,10 +69,10 @@ scripts:
 ```
 ## Screenshot
 
-![light](https://cdn.jsdelivr.net/gh/xbmlz/static@main/img/202207201445682.png)
+![light](https://cdn.jsdelivr.net/gh/xbmlz/static@main/img/202207201507443.png)
 
-![dark](https://cdn.jsdelivr.net/gh/xbmlz/static@main/img/202207201449117.png)
+![dark](https://cdn.jsdelivr.net/gh/xbmlz/static@main/img/202207201507612.png)
 
-![light-phone](https://cdn.jsdelivr.net/gh/xbmlz/static@main/img/202207201456532.png)
+![light-m](https://cdn.jsdelivr.net/gh/xbmlz/static@main/img/202207201508341.png)
 
-![dark-phone](https://cdn.jsdelivr.net/gh/xbmlz/static@main/img/202207201456915.png)
+![dark-m](https://cdn.jsdelivr.net/gh/xbmlz/static@main/img/202207201508877.png)
