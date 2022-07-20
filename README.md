@@ -1,5 +1,27 @@
+<p align='center'>
+  <img src='https://raw.githubusercontent.com/xbmlz/hexo-theme-maple/main/source/images/logo.svg' alt='Hexo-theme-maple' width='120'/>
+</p>
+
+<p align='center'>
+concise but not simple hexo theme
+</p>
+
+<br>
+
+<p align='center'>
+<a href="">Live Demo</a>
+</p>
+
+<p align='center'>
+<b>English</b> | <a href="https://github.com/xbmlz/maple/blob/main/README.zh-CN.md">简体中文</a>
+
+</p>
+
+<br>
+
 ## Features
 
+- 📦 Out of the box - Almost zero configuration
 - 🎨 Automatically switched light and dark theme
 - ⚗️ [MathJax Support](http://docs.mathjax.org/en/latest/)
 - ⚡️ [Mermaid Support](https://mermaid-js.github.io/mermaid)
@@ -21,8 +43,6 @@ nav:
   Posts: /archives
   Categories: /category
   Tags: /tag
-
-rss: /atom.xml
 
 # favicon
 favicon: /favicon.png
