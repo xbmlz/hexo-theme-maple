@@ -65,5 +65,13 @@ stylesheets:
 scripts:
   - /js/index.js
   - /js/iconify.min.js
-
 ```
+## Screenshot
+
+![light](https://cdn.jsdelivr.net/gh/xbmlz/static@main/img/202207201445682.png)
+
+![dark](https://cdn.jsdelivr.net/gh/xbmlz/static@main/img/202207201449117.png)
+
+![light-phone](https://cdn.jsdelivr.net/gh/xbmlz/static@main/img/202207201456532.png)
+
+![dark-phone](https://cdn.jsdelivr.net/gh/xbmlz/static@main/img/202207201456915.png)

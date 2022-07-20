@@ -5,9 +5,11 @@
   <nav class="nav">
     <div class="spacer"></div>
     <div class="right">
-      <% for (var i in theme.nav){ %>
-      <a class="item" href="<%- url_for(theme.nav[i]) %>"><%= i %></a>
-      <% } %>
+      <div class="menu">
+        <% for (var i in theme.nav){ %>
+          <a class="item" href="<%- url_for(theme.nav[i]) %>"><%= i %></a>
+          <% } %>
+      </div>
       <div class="links">
         <% if (theme.links !== undefined) { %>
           <% for (var key in theme.links) { %>
