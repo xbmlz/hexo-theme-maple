@@ -1,21 +1,21 @@
 <% if (page.comments !== false) { %>
-<div id="disqus_thread"></div>
+<div id="disqusjs"></div>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/disqusjs@3.0/dist/browser/styles/disqusjs.css">
-<script id="js-disqusjs" src="https://cdn.jsdelivr.net/npm/disqusjs@1.2.5/dist/disqus.js" async></script>
+<script id="js-disqusjs" src="https://cdn.jsdelivr.net/npm/disqusjs@3.0/dist/browser/disqusjs.es2015.umd.min.js"></script>
 <script>
   document.getElementById('js-disqusjs').addEventListener('load', function () {
-    function loadDisqusJS() {
-        new DisqusJS({
-            shortname: 'hexo-theme-maple',
-            api: 'https://disqus.com/api/',
-            admin: 'disqus_dbfUNh6DjP',
-        })
-    }
-    if (document.readyState === 'complete') {
-        loadDisqusJS();
-    } else {
-        window.addEventListener('load', loadDisqusJS);
-    }
+    const disqusjs = new DisqusJS({
+      shortname: 'hexo-theme-maple',
+      api: 'https://disqus.com/api/',
+      admin: 'disqus_dbfUNh6DjP',
+      apikey: 'F8Js8W3WLwXc20bYiKGLS9qTCL1qeq33cPjWFzat1HYLMkH0V9mdUg9JBHpXSBYw',
+    })
+    // DisqusJS 1.3.0 在初始化实例后评论列表已经开始渲染到页面上，DisqusJS 3.0.0 还需要额外调用 render() 方法：
+    disqusjs.render(document.getElementById('disqusjs')); // render() 方法需要传入 DisqusJS 的容器
+
+    // DisqusJS 3.0.0 新增了销毁实例的 destroy() 方法，你可以在 PJAX 跳转时直接调用它：
+    // disqusjs.destroy();
+    // 关于 PJAX 站点使用，请参考前文「SPA 与 PJAX 站点注意事项」
 });
 </script>
 <% } %>
