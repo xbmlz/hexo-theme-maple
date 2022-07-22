@@ -27,6 +27,7 @@ concise but not simple hexo theme
 - 💹 Baidu/Google Analytics
 - ⚗️ [MathJax Support](http://docs.mathjax.org/en/latest/)
 - ⚡️ [Mermaid Support](https://mermaid-js.github.io/mermaid)
+- 🖼️ [Fancybox Support](https://fancyapps.com/docs/ui/fancybox)
 
 ## Installation
 

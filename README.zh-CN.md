@@ -27,6 +27,7 @@ concise but not simple hexo theme
 - 💹 百度/谷歌分析统计
 - ⚗️ [MathJax 支持](http://docs.mathjax.org/en/latest/)
 - ⚡️ [Mermaid 支持](https://mermaid-js.github.io/mermaid)
+- 🖼️ [Fancybox Support](https://fancyapps.com/docs/ui/fancybox)
 
 ## 安装
 
