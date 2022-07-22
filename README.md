@@ -13,7 +13,7 @@ concise but not simple hexo theme
 </p>
 
 <p align='center'>
-<b>English</b> | <a href="https://github.com/xbmlz/maple/blob/main/README.zh-CN.md">简体中文</a>
+<b>English</b> | <a href="https://github.com/xbmlz/hexo-theme-maple/blob/main/README.zh-CN.md">简体中文</a>
 
 </p>
 
@@ -34,7 +34,7 @@ The simplest way to install is to clone the entire repository:
 
 ```bash
 cd your-blog/themes
-git clone https://github.com/theme-next/hexo-theme-next themes/next
+git clone https://github.com/xbmlz/hexo-theme-maple.git themes/maple
 ```
 
 ## Configuration
@@ -47,7 +47,7 @@ nav:
   Tags: /tag
 
 # favicon
-favicon: /favicon.png
+favicon: /favicon.ico
 
 # logo
 logo: /images/logo.svg
@@ -55,9 +55,9 @@ logo: /images/logo.svg
 # links
 links:
   Github: https://github.com/xbmlz
-  ZhiHu:
-  Twitter:
-  Weibo:
+  # ZhiHu:
+  # Twitter:
+  # Weibo:
 
 
 # stylesheets loaded in the <head>

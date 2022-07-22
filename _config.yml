@@ -19,9 +19,18 @@ links:
   Twitter:
   Weibo:
 
+# analytics
 google_analytics:
 baidu_analytics:
 
+
+
+# disqusjs
+disqusjs:
+  enable: false
+  api: https://disqus.com/api/
+  apikey: F8Js8W3WLwXc20bYiKGLS9qTCL1qeq33cPjWFzat1HYLMkH0V9mdUg9JBHpXSBYw
+  shortname: hexo-theme-maple
 
 # stylesheets loaded in the <head>
 stylesheets:
