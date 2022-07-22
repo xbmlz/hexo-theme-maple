@@ -23,11 +23,9 @@ links:
 google_analytics:
 baidu_analytics:
 
-
-
 # disqusjs
 disqusjs:
-  enable: false
+  enable: true
   api: https://disqus.com/api/
   apikey: F8Js8W3WLwXc20bYiKGLS9qTCL1qeq33cPjWFzat1HYLMkH0V9mdUg9JBHpXSBYw
   shortname: hexo-theme-maple
