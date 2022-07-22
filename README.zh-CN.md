@@ -9,7 +9,7 @@ concise but not simple hexo theme
 <br>
 
 <p align='center'>
-<a href="">Live Demo</a>
+<a href="https://xbmlz.github.io">Live Demo</a>
 </p>
 
 <p align='center'>
