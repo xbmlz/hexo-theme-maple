@@ -57,7 +57,7 @@ _config.yml
 ## 更新
 
 ```bash
-cd themes/landscape
+cd themes/maple
 git pull
 ```
 
@@ -71,7 +71,7 @@ nav:
   Tags: /tag
 
 # favicon
-favicon: /favicon.png
+favicon: /favicon.ico
 
 # logo
 logo: /images/logo.svg

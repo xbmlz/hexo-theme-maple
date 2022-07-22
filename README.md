@@ -41,7 +41,7 @@ git clone https://github.com/xbmlz/hexo-theme-maple.git themes/maple
 npm install:
 
 ```bash
-npm i hexo-theme-landscape
+npm i hexo-theme-maple
 ```
 
 ## Enable
@@ -57,7 +57,7 @@ _config.yml
 ## Update
 
 ```bash
-cd themes/landscape
+cd themes/maple
 git pull
 ```
 
@@ -71,7 +71,7 @@ nav:
   Tags: /tag
 
 # favicon
-favicon: /favicon.png
+favicon: /favicon.ico
 
 # logo
 logo: /images/logo.svg
