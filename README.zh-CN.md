@@ -30,11 +30,34 @@ concise but not simple hexo theme
 
 ## 安装
 
-The simplest way to install is to clone the entire repository:
+Local git install:
 
 ```bash
 cd your-blog/themes
 git clone https://github.com/xbmlz/hexo-theme-maple.git themes/maple
+```
+
+npm install:
+
+```bash
+npm i hexo-theme-maple
+```
+
+## 开启
+
+Modify `theme` setting in `_config.yml` to `maple`.
+
+```text
+_config.yml
+- theme: some-theme
++ theme: maple
+```
+
+## 更新
+
+```bash
+cd themes/landscape
+git pull
 ```
 
 ## 配置
