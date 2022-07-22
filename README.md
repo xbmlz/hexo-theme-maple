@@ -47,7 +47,7 @@ nav:
   Tags: /tag
 
 # favicon
-favicon: /favicon.ico
+favicon: /favicon.png
 
 # logo
 logo: /images/logo.svg
@@ -59,14 +59,28 @@ links:
   # Twitter:
   # Weibo:
 
+# analytics
+google_analytics:
+baidu_analytics:
 
-# stylesheets loaded in the <head>
-stylesheets:
-  - /css/style.css
+# mathjax
+fancybox: true
 
-scripts:
-  - /js/index.js
-  - /js/iconify.min.js
+# mathjax
+mathjax: true
+
+# mermaid
+mermaid:
+  enable: true
+  # Available themes: default | dark | forest | neutral
+  theme: default
+
+# disqusjs
+disqusjs:
+  enable: false
+  api:
+  apikey:
+  shortname:
 ```
 ## Screenshot
 

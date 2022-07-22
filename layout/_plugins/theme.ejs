@@ -1,5 +1,5 @@
 <script>
-  document.ready(() => {
+  $(document).ready(() => {
     let media = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)')
     let isDark = () => {
       const setting = localStorage.getItem('hexo-color-scheme') || 'auto'

@@ -37,23 +37,12 @@ if (is_archive()) {
     <link rel="icon" href="<%- url_for(theme.favicon) %>">
 <% } %>
 
-<%# css list %>
-<% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
-  <!-- stylesheets list from _config.yml -->
-  <% theme.stylesheets.forEach(url => { %>
-    <link rel="stylesheet" href="<%- url_for(url) %>">
-  <% }); %>
+<%- css('css/style') %>
+<%- css('lib/tocbot/tocbot.css') %>
+<%- css('lib/fancybox/fancybox.min.css') %>
+
+<% if (theme.disqusjs.enable){ %>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/disqusjs@3.0/dist/browser/styles/disqusjs.css">
 <% } %>
-<%# javascript list %>
-<% if (theme.scripts !== undefined && theme.scripts.length > 0) { %>
-  <!-- scripts list from _config.yml -->
-  <% theme.scripts.forEach(url => { %>
-    <script src="<%- url_for(url) %>"></script>
-  <% }); %>
-<% } %>
-<%# mathjax support %>
-<%- partial('_plugins/mathjax.ejs') %>
-<%# mermaid support %>
-<%- partial('_plugins/mermaid.ejs') %>
-<%# theme support %>
-<%- partial('_plugins/theme.ejs') %>
+
+

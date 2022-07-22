@@ -1,13 +1,15 @@
+<% if (theme.mermaid.enable) { %>
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script>
-document.ready(() => {
-  const maraidConfig = {
-     startOnLoad: true,
-     flowchart: {
-       useMaxWidth: false,
-       htmlLabels: true
-     }
-   }
-   mermaid.initialize(maraidConfig)
-})
+  $(document).ready(() => {
+    const maraidConfig = {
+      theme: "<%= theme.mermaid.theme %>",
+      logLevel: 3,
+      flowchart: { curve: "linear" },
+      gantt: { axisFormat: "%m/%d/%Y" },
+      sequence: { actorMargin: 50 },
+    };
+    mermaid.initialize(maraidConfig);
+  });
 </script>
+<% } %>

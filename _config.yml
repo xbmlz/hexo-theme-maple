@@ -4,8 +4,6 @@ nav:
   Categories: /category
   Tags: /tag
 
-rss: /atom.xml
-
 # favicon
 favicon: /favicon.png
 
@@ -15,27 +13,29 @@ logo: /images/logo.svg
 # links
 links:
   Github: https://github.com/xbmlz
-  ZhiHu:
-  Twitter:
-  Weibo:
+  # ZhiHu:
+  # Twitter:
+  # Weibo:
 
 # analytics
 google_analytics:
 baidu_analytics:
 
+# mathjax
+fancybox: true
+
+# mathjax
+mathjax: true
+
+# mermaid
+mermaid:
+  enable: true
+  # Available themes: default | dark | forest | neutral
+  theme: default
+
 # disqusjs
 disqusjs:
-  enable: true
-  api: https://disqus.com/api/
-  apikey: F8Js8W3WLwXc20bYiKGLS9qTCL1qeq33cPjWFzat1HYLMkH0V9mdUg9JBHpXSBYw
-  shortname: hexo-theme-maple
-
-# stylesheets loaded in the <head>
-stylesheets:
-  - /css/style.css
-  - /lib/tocbot/tocbot.css
-
-scripts:
-  - /js/index.js
-  - /js/iconify.min.js
-  - /lib/tocbot/tocbot.min.js
+  enable: false
+  api:
+  apikey:
+  shortname:
