@@ -1,11 +1,11 @@
 <script>
-  $(document).ready(() => {
+  window.onload = () => {
     let media = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)')
     let isDark = () => {
       const setting = localStorage.getItem('hexo-color-scheme') || 'auto'
       if (setting === 'dark' || (media.matches && setting !== 'light')) {
         return true
-      } else {
+      } else{
         return false
       }
     }
@@ -27,7 +27,7 @@
       const darkMode = media.matches ? 'dark' : 'light'
       if (darkMode !== scheme) {
         localStorage.setItem('hexo-color-scheme', scheme)
-      } else {
+      } else{
         localStorage.setItem('hexo-color-scheme', 'auto')
       }
     }
@@ -44,10 +44,17 @@
       }
     }
 
+    // let media = getMedia()
     if (typeof media.addEventListener === 'function') {
       media.addEventListener('change', updateMode)
     } else if (typeof media.addListener === 'function') {
       media.addListener(updateMode)
+    }
+
+    if (isDark()) {
+      document.getElementById('moon-icon').style.display = 'block'
+    } else {
+      document.getElementById('sun-icon').style.display = 'block'
     }
 
     document.getElementById('moon-icon').addEventListener('click', () => {
@@ -56,13 +63,5 @@
     document.getElementById('sun-icon').addEventListener('click', () => {
       toggleDarkMode()
     })
-
-
-    // theme icon init
-    if (isDark()) {
-      document.getElementById('moon-icon').style.display = 'block'
-    } else {
-      document.getElementById('sun-icon').style.display = 'block'
-    }
-  })
+  }
 </script>

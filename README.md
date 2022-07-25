@@ -38,12 +38,6 @@ cd your-blog/themes
 git clone https://github.com/xbmlz/hexo-theme-maple.git themes/maple
 ```
 
-npm install:
-
-```bash
-npm i hexo-theme-maple
-```
-
 ## Enable
 
 Modify `theme` setting in `_config.yml` to `maple`.

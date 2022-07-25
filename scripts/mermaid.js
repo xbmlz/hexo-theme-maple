@@ -1,5 +1,5 @@
 // console.log(hexo)
-hexo.extend.filter.register('mermaid-render', (data) => {
+hexo.extend.filter.register('before_post_render', (data) => {
   const reg = /(\s*)(`{3}) *(mermaid) *\n?([\s\S]+?)\s*(\2)(\n+|$)/g;
   const ignore = data => {
     let source = data.source;
@@ -11,4 +11,4 @@ hexo.extend.filter.register('mermaid-render', (data) => {
         return `${start}<pre class="mermaid">${content}</pre>${end}`;
     });
   }
-});
+}, 9);
