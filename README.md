@@ -28,6 +28,8 @@ concise but not simple hexo theme
 - ⚗️ [MathJax Support](http://docs.mathjax.org/en/latest/)
 - ⚡️ [Mermaid Support](https://mermaid-js.github.io/mermaid)
 - 🖼️ [Fancybox Support](https://fancyapps.com/docs/ui/fancybox)
+- 🦜 [Disqusjs Support](https://github.com/SukkaW/DisqusJS)
+- 📊 [ECharts Support](https://echarts.apache.org/)
 
 ## Installation
 
@@ -42,7 +44,7 @@ git clone https://github.com/xbmlz/hexo-theme-maple.git themes/maple
 
 Modify `theme` setting in `_config.yml` to `maple`.
 
-```text
+```diff
 _config.yml
 - theme: some-theme
 + theme: maple

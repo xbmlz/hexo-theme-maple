@@ -27,7 +27,9 @@ concise but not simple hexo theme
 - 💹 百度/谷歌分析统计
 - ⚗️ [MathJax 支持](http://docs.mathjax.org/en/latest/)
 - ⚡️ [Mermaid 支持](https://mermaid-js.github.io/mermaid)
-- 🖼️ [Fancybox Support](https://fancyapps.com/docs/ui/fancybox)
+- 🖼️ [Fancybox 支持](https://fancyapps.com/docs/ui/fancybox)
+- 🦜 [Disqusjs 支持](https://github.com/SukkaW/DisqusJS)
+- 📊 [ECharts 支持](https://echarts.apache.org/)
 
 ## 安装
 
@@ -42,7 +44,7 @@ git clone https://github.com/xbmlz/hexo-theme-maple.git themes/maple
 
 Modify `theme` setting in `_config.yml` to `maple`.
 
-```text
+```diff
 _config.yml
 - theme: some-theme
 + theme: maple

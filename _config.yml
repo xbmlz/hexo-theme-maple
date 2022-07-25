@@ -27,6 +27,9 @@ fancybox: true
 # mathjax
 mathjax: true
 
+# echarts
+echarts: true
+
 # mermaid
 mermaid:
   enable: true

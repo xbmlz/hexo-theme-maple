@@ -1,5 +1,8 @@
-// console.log(hexo)
 hexo.extend.filter.register('before_post_render', (data) => {
+  const config = hexo.theme.config;
+  if (!config.mermaid.enable) {
+    return;
+  }
   const reg = /(\s*)(`{3}) *(mermaid) *\n?([\s\S]+?)\s*(\2)(\n+|$)/g;
   const ignore = data => {
     let source = data.source;
