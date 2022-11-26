@@ -1,5 +1,18 @@
-<footer class="footer">
-  <div class="copyright">
-    <span>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/xbmlz/hexo-theme-maple" target="_blank">Maple</a></span>
+<footer class="flex flex-col h-40 items-center justify-center text-gray-400 text-sm">
+  <!-- busuanzi -->
+  <%- partial('_plugins/busuanzi') %>
+  <!-- copyright -->
+  <div class="flex items-center gap-2">
+    <span>© 2022</span>
+    <iconify-icon width="18" icon="emojione-monotone:maple-leaf" ></iconify-icon>
+    <a href="https://github.com/xbmlz" target="_blank" rel="noopener noreferrer">xbmlz</a>
   </div>
+  <!-- powered by -->
+  <div class="flex items-center gap-2">
+    <span>Powered by</span>
+    <a href="https://hexo.io/" target="_blank" rel="noopener noreferrer">Hexo</a>
+    <span>&</span>
+    <a href="https://github.com/xbmlz/hexo-theme-maple" target="_blank" rel="noopener noreferrer">Maple</a>
+  </div>
+
 </footer>

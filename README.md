@@ -3,7 +3,7 @@
 </p>
 
 <p align='center'>
-concise but not simple hexo theme
+concise but not simple hexo theme.
 </p>
 
 <br>
@@ -28,8 +28,10 @@ concise but not simple hexo theme
 - ⚗️ [MathJax Support](http://docs.mathjax.org/en/latest/)
 - ⚡️ [Mermaid Support](https://mermaid-js.github.io/mermaid)
 - 🖼️ [Fancybox Support](https://fancyapps.com/docs/ui/fancybox)
-- 🦜 [Disqusjs Support](https://github.com/SukkaW/DisqusJS)
+- 🦜 [Giscus Support](https://giscus.app/zh-CN)
 - 📊 [ECharts Support](https://echarts.apache.org/)
+
+![maple](https://cdn.jsdelivr.net/gh/xbmlz/static@main/img/Maple.png)
 
 ## Installation
 
@@ -95,19 +97,13 @@ mermaid:
   # Available themes: default | dark | forest | neutral
   theme: default
 
-# disqusjs
-disqusjs:
-  enable: false
-  api:
-  apikey:
-  shortname:
+# giscus
+giscus:
+  enable: true
+  repo:
+  repo_id:
+  category:
+  category_id:
+  mapping:
 ```
-## Screenshot
 
-![light](https://cdn.jsdelivr.net/gh/xbmlz/static@main/img/202207201507443.png)
-
-![dark](https://cdn.jsdelivr.net/gh/xbmlz/static@main/img/202207201507612.png)
-
-![light-m](https://cdn.jsdelivr.net/gh/xbmlz/static@main/img/202207201508341.png)
-
-![dark-m](https://cdn.jsdelivr.net/gh/xbmlz/static@main/img/202207201508877.png)

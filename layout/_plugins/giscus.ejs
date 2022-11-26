@@ -1,0 +1,17 @@
+<% if (theme.giscus.enable){ %>
+<script src="https://giscus.app/client.js"
+        data-repo="<%= theme.giscus.repo %>"
+        data-repo-id="<%= theme.giscus.repo_id %>"
+        data-category="<%= theme.giscus.category %>"
+        data-category-id="<%= theme.giscus.category_id %>"
+        data-mapping="<%= theme.giscus.mapping %>"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+<% } %>

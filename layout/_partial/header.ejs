@@ -1,28 +1,51 @@
-<header class="header">
-  <a href="<%- config.root %>" class="logo" focusable="false">
-    <img src="<%- theme.logo %>" alt="<%- config.title %>" />
-  </a>
-  <nav class="nav">
-    <div class="spacer"></div>
-    <div class="right">
-      <div class="menu">
-        <% for (var i in theme.nav){ %>
-          <a class="item" href="<%- url_for(theme.nav[i]) %>"><%= i %></a>
-          <% } %>
+<header class="fixed w-full px-5 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
+  <div class="max-auto">
+    <nav class="flex items-center text-base">
+      <a href="<%- config.root %>" class="group">
+        <h2 class="font-medium tracking-tighterp text-l p-2">
+          <img class="w-5 mr-2 inline-block transition-transform group-hover:rotate-[30deg]" src="<%- theme.logo %>" alt="<%- config.title %>" />
+          <%= config.title %>
+        </h2>
+      </a>
+      <div id="header-title" class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium whitespace-nowrap overflow-hidden overflow-ellipsis">
+        <%- page.title %>
       </div>
-      <div class="links">
+      <div class="flex-1"></div>
+      <div class="flex items-center gap-3">
+        <% for (var i in theme.nav){ %>
+          <a class="hidden sm:flex" href="<%- url_for(theme.nav[i]) %>"><%= i %></a>
+        <% } %>
         <% if (theme.links !== undefined) { %>
           <% for (var key in theme.links) { %>
-            <a title="<%- key %>" href="<%= theme.links[key] %>" class="link-item">
-              <span class="iconify" data-icon="ri:<%- key.toLowerCase() %>-line"></span>
+            <a class="w-5 h-5 hidden sm:flex" title="<%- key %>" href="<%= theme.links[key] %>">
+              <iconify-icon width="20" icon="ri:<%- key.toLowerCase() %>-line"></iconify-icon>
             </a>
           <% } %>
         <% } %>
+        <a class="w-5 h-5" title="toggle theme">
+          <iconify-icon width="20" icon="ri:sun-line" id="toggle-dark"></iconify-icon>
+        </a>
       </div>
-      <a class="toggleDark" id="dark-mode">
-        <span class="iconify" data-icon="ri:sun-line" id="sun-icon" style="display: none"></span>
-        <span class="iconify" data-icon="ri:moon-line" id="moon-icon" style="display: none"></span>
-      </a>
-    </div>
-  </nav>
+      <div class="flex items-center justify-center gap-3 ml-3 sm:hidden">
+        <span class="w-5 h-5" aria-hidden="true" role="img" id="open-menu">
+          <iconify-icon width="20" icon="carbon:menu" ></iconify-icon>
+        </span>
+        <span class="w-5 h-5 hidden" aria-hidden="true" role="img" id="close-menu">
+          <iconify-icon  width="20" icon="carbon:close" ></iconify-icon>
+        </span>
+      </div>
+    </nav>
+  </div>
 </header>
+<div id="menu-panel" class="h-0 overflow-hidden sm:hidden fixed left-0 right-0 top-12 bottom-0 z-10">
+  <div id="menu-content" class="relative z-20 bg-white/80 px-6 sm:px-8 py-2 backdrop-blur-xl -translate-y-full transition-transform duration-300">
+    <ul class="nav flex flex-col sm:flex-row text-sm font-medium">
+      <% for (var i in theme.nav){ %>
+        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
+          <a href="<%- url_for(theme.nav[i]) %>" class="flex h-12 sm:h-auto items-center"><%= i %></a>
+        </li>
+      <% } %>
+    </ul>
+  </div>
+  <div class="mask bg-black/20 absolute inset-0"></div>
+</div>

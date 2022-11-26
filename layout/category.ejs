@@ -16,18 +16,18 @@ how to add a category page:
  %>
 
 <% if(is_category()){ %>
-<div class="categories">
+<div class="">
   <h2>Categories-<%-page.category%></h2>
 </div>
 <%- partial('archive', {pagination: config.category, index: true}) %>
 <% } else { %>
-<div class="categories">
-  <h2>Categories</h2>
-  <ul class="category-list">
+<div class="px-6 max-w-prose mx-auto md:px-0 mt-6">
+  <h2 class="font-bold text-2xl">Categories</h2>
+  <ul class="mt-2">
     <% site.categories.forEach(category =>{ %>
-      <li class="category-item">
-        <a class="category-item-link" href="<%- url_for(category.path) %>"> <%- category.name %></a>
-        <span class="category-item-count">(<%- category.posts.length %>)</span>
+      <li class="mt-2">
+        <a href="<%- url_for(category.path) %>"> <%- category.name %></a>
+        <span>(<%- category.posts.length %>)</span>
       </li>
     <% }) %>
   </ul>

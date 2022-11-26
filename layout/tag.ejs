@@ -15,18 +15,18 @@ how to add a tag page:
     ---
  %>
 <% if(is_tag()){ %>
-  <div class="tags">
-    <h2 class="post-title">Tag - <%-page.tag%></h2>
+  <div>
+    <h2>Tag - <%-page.tag%></h2>
   </div>
   <%- partial('archive', {pagination: config.tag, index: true}) %>
 <% } else { %>
-  <div class="tags">
-    <h2>Tags</h2>
-    <ul class="tag-list">
+  <div class="px-6 max-w-prose mx-auto md:px-0 mt-6">
+    <h2 class="font-bold text-2xl">Tags</h2>
+    <ul class="mt2">
       <% site.tags.forEach(item => { %>
-        <li class="tag-item">
-          <a class="tag-item-link" href="<%-url_for(item.path)%>"><%- item.name%></a>
-          <span class="tag-item-count">(<%-item.length%>)</span>
+        <li class="mt-2">
+          <a href="<%-url_for(item.path)%>"><%- item.name%></a>
+          <span >(<%-item.length%>)</span>
         </li>
       <% }) %>
     </ul>

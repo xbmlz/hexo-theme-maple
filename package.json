@@ -8,5 +8,14 @@
     "theme",
     "maple"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "files": [
+    "languages",
+    "layout",
+    "scripts",
+    "source",
+    "_config.yml",
+    "README.md",
+    "README.zh-CN.md"
+  ]
 }

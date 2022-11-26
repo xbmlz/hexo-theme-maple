@@ -1,36 +1,36 @@
-<%# toc %>
-<%if(toc(page.content).length!==0){%>
-  <%- partial('_partial/toc') %>
-<%}%>
-<div class="post">
-  <div class="post-header">
-    <h1 class="post-title"><%- page.title %></h1>
-    <p class="post-meta"><%- date(page.date, "YYYY-MM-DD HH:mm:ss") %></p>
-  </div>
-  <div class="post-content">
-    <article>
-      <%- page.content %>
-    </article>
-  </div>
-  <div class="post-footer">
-    <a href="javascript:window.history.back();">
-      cd ..
-    </a>
-    <br>
-    <a href="<%- config.root %>">
-      cd /
-    </a>
-  </div>
-  <div class="post-license">
-    <span>
-      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" style="color: inherit;">
-        CC BY-NC-SA 4.0
-      </a>
-      2021-PRESENT © <%= config.author %>
+<article class="px-6 max-w-prose mx-auto md:px-0">
+  <!-- header -->
+  <header class="overflow-hidden pt-6 pb-6 md:pt-12">
+    <div class="pt-4 md:pt-6">
+      <h1 id="article-title" class="text-[2rem] font-bold leading-snug mb-4 md:mb-6 md:text-[2.6rem]">
+        <%- page.title %>
+      </h1>
+      <p class="mb-6">
+        <%- page.excerpt %>
+      </p>
+      <div>
+        <section class="flex items-center gap-3 text-sm">
+          <time><%- date(page.date, "YYYY-MM-DD HH:mm:ss") %></time>
+        </section>
+      </div>
+    </div>
+  </header>
+  <!-- content -->
+  <article class="mt-10 prose dark:prose-invert post-content">
+    <%- page.content %>
+  </article>
+  <!-- tag -->
+  <div class="mt-12 pt-6 border-t border-gray-200">
+    <span class="bg-gray-100 dark:bg-gray-700 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+      <% if (page.tags && page.tags.length) { %>
+        <% page.tags.forEach(function (tag) { %>
+          <a href="<%- url_for(tag.path) %>"><%- tag.name %></a>
+        <% }); %>
+      <% } %>
     </span>
-    <div></div>
   </div>
-  <div class="post-comment">
-    <div id="disqusjs"></div>
+  <!-- comment -->
+  <div class="article-comments mt-12">
+    <%- partial('_plugins/giscus') %>
   </div>
-</div>
+</article>

@@ -1,6 +1,6 @@
 <meta charset="UTF-8">
-<%- partial('google-analytics.ejs') %>
-<%- partial('baidu-analytics.ejs') %>
+<%- partial('_plugins/google-analytics') %>
+<%- partial('_plugins/baidu-analytics') %>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <% if(config.author){ %>
@@ -34,15 +34,18 @@ if (is_archive()) {
 
 <%# favicon %>
 <% if (theme.favicon){ %>
-    <link rel="icon" href="<%- url_for(theme.favicon) %>">
+<link rel="icon" href="<%- url_for(theme.favicon) %>">
 <% } %>
 
-<%- css('css/style') %>
-<%- css('lib/tocbot/tocbot.css') %>
+<%- css('css/main') %>
+<%- css('lib/nprogress/nprogress.css') %>
 <%- css('lib/fancybox/fancybox.min.css') %>
 
-<% if (theme.disqusjs.enable){ %>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/disqusjs@3.0/dist/browser/styles/disqusjs.css">
-<% } %>
+<%- js('lib/jquery.min.js') %>
+<%- js('lib/iconify-icon.min.js') %>
+
+<%- partial('_plugins/tailwindcss') %>
+<%- partial('_plugins/nprogress') %>
+<%- partial('_plugins/theme') %>
 
 

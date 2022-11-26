@@ -1,279 +1,38 @@
-.post
-  max-width: global-max-width
-  font-size: 1rem
-  line-height: 1.75
-  margin: auto
-
-.post-header
-  margin-bottom: 2rem
-
-.post-footer
-  margin-top: 2rem
-  margin-bottom: 2rem
-  a
-    color: var(--fg-deep)
-    font-family: block-font-family
-    opacity: 0.5
-    font-size: 1rem
-    line-height: 1.75
-    &:hover
-      opacity: 0.75
-
-.post-license
-  opacity: 0.5
-  display: flex
-  margin-top: 2.5rem
-  margin-bottom: 1.5rem
-  margin: auto
-  span
-    font-size: 0.875rem
-    line-height: 1.25rem
-
-.post-title
-  color: var(--fg-deeper)
-  font-weight: 800
-  font-size: 2.25em
-  margin-top: 0
-  margin-bottom: 0.8888889em
-  line-height: 1.1111111
-
-.post-meta
-  opacity: 0.5
-  margin-top: -0.5rem !important
-
-.post-toc
-  position: fixed
-  top: 95px
-  right: 2em
-  width: 15rem
-  font-size: 0.85rem
-  @media screen and (max-width: 1300px)
-    display: none
-
-  .tocbot-list
-    max-height: 450px
-    max-width: 250px
-    overflow: auto
-    position: relative
-    padding-right: 0.875rem
-    &:-webkit-scrollbar
-      width 6px
-      height 6px
-    &:-webkit-scrollbar-thumb
-      width 6px
-      background-color: var(-fg)
-      opacity: 0.6
-      border-radius: 2px
-
-    ul
-      list-style: none
-      position: inherit
-      overflow: hidden
-
-  .toc-list-item
-    line-height: 1.8rem
-  .toc-link
-    text-decoration: none
-    display: inline-block
-    width:100%
-    color: var(--fg)
-    opacity: 0.6
-
-    &:before
-      background-color: var(--fg)
-      height: 1.8rem
-    &:hover
-      opacity: 1
-
-  .is-active-link
-    opacity: 1 !important
-    &:before
-      background-color: var(--fg)
+html:not(.dark)
+  --highlight-keyword      : #1c6b48
+  --highlight-background   : #fbfbfb
+  --highlight-comment      : #a0ada0
+  --highlight-foreground   : #393a34
+  --highlight-string       : #b56959
+  --highlight-gutter       : #869194
+  --highlight-class        : #2993a3
+  --highlight-function     : #6c7834
+  --prism-builtin          : #ab5959
+  --prism-property         : #b58451
+  --prism-decorator        : #bd8f8f
 
 
-  .tocbot-list-menu
-    margin: 1rem
-    font-size: 0.8rem
-    a
-      display: block
-      margin: 0.6rem 0
-      color: var(--fg)
-      opacity: 0.6
-      &:hover
-        opacity: 1
+
+html.dark
+  --highlight-keyword      : #4d9375
+  --highlight-background   : #111111
+  --highlight-comment      : #758575
+  --highlight-foreground   : #d4cfbf
+  --highlight-string       : #d48372
+  --highlight-gutter       : #869194
+  --highlight-class        : #54b1bf
+  --highlight-function     : #a1b567
+  --prism-builtin          : #858585
+  --prism-property         : #dd8e6e
+  --prism-decorator        : #bd8f8f
 
 .post-content
-  margin: auto
-  &:last-child
-    margin-bottom: 0
-  .fancybox-img
-    &:hover
-      opacity: none
-      border: none
-    border: none
-
-  h1
-    color: var(--fg-deeper)
-    font-weight: 800
-    font-size: 2.25em
-    margin-top: 0
-    margin-bottom: 0.8888889em
-    line-height: 1.1111111
-  h2
-    color: inherit
-    font-weight: 700
-    font-size: 1.5em
-    margin-top: 2em
-    margin-bottom: 1em
-    line-height: 1.3333333
-  h3
-    color: inherit
-    font-weight: 600
-    font-size: 1.25em
-    margin-top: 1.6em
-    margin-bottom: 0.6em
-    line-height: 1.6
-  h4
-    color: inherit
-    font-weight: 600
-    margin-top: 1.5em
-    margin-bottom: 0.5em
-    line-height: 1.5
-
-  hr
-    border-color: rgba(125,125,125,0.3)
-    margin-top: 3em
-    margin-bottom: 3em
-
-  p
-    margin-top: 1.25em
-    margin-bottom: 1.25em
-
-  strong
-    color: var(--fg-deep)
-    font-weight: 600
-
-  em
-    color: inherit
-
-  blockquote
-    font-size: 1rem
-    display: block
-    margin: 1em 0
-    padding: 1em 1.2em 1em 1.2em
-    position: relative
-    color: inherit
-    border-left: 0.25rem solid #7d7d7d4d
-    p
-      margin 0
-    footer
-      strong
-        margin-right 0.5em
-
-  ul
-    list-style: none
-    margin: 0
-    padding: 0
-    margin-top: 1.25em;
-    margin-bottom: 1.25em
-    list-style-type: none
-    >li
-      position: relative
-      padding-left: 1.75rem
-      margin-top: 0.5em
-      margin-bottom: 0.5em
-      &:before
-        content: ""
-        position: absolute
-        background-color: #d1d5db
-        border-radius: 50%
-        width: .375em
-        height: .375em
-        top: .6875em
-        left: .25em
-  ol
-    margin: 0
-    padding: 0
-    margin-top: 1.25em
-    margin-bottom: 0em
-    list-style-type: none
-    >li
-      position: relative
-      padding-left: 1.75em
-      margin-top: 0.5em;
-      margin-bottom: 0.5em
-      &:before
-        content: counter(list-item, var(--list-counter-style, decimal)) "."
-        position: absolute
-        font-weight: 400
-        color: #6b7280
-        left: 0
-
-  a
-    color: var(--fg-deeper)
-    text-decoration: none
-    font-weight: 500
-    text-decoration: none
-    border-bottom: 1px solid rgba(125, 125, 125, 0.3)
-    transition: border 0.3s ease-in-out
-    &:hover
-      border-bottom: 1px solid var(--fg)
-    // code
-    //   color: #111827;
-
-  img
-    margin-top: 2em
-    margin-bottom: 2em
-
-  table
-    width: 100%
-    table-layout: auto
-    text-align: left
-    margin-top: 2em
-    margin-bottom: 2em
-    font-size: 0.875em
-    line-height: 1.7142857
-    border-collapse: collapse
-    border-color: inherit
-    text-indent: 0
-    thead
-      color: var(--fg-deeper)
-      font-weight: 600
-      border-bottom-width: 1px
-      border-bottom-color: #d1d5db
-      th
-        vertical-align: bottom
-        padding-right: 0.5714286em
-        padding-bottom: 0.5714286em
-        padding-left: 0.5714286em
-        &:first-child
-          padding-left: 0
-        &:last-child
-          padding-right: 0
-    tbody
-      tr
-        border-bottom-width: 1px
-        border-bottom-color: #e5e7eb
-        &:last-child
-          border-bottom-width: 0
-      td
-        vertical-align: top
-        padding-top: 0.5714286em
-        padding-right: 0.5714286em
-        padding-bottom: 0.5714286em
-        padding-left: 0.5714286em
-        &:first-child
-          padding-left: 0
-        &:last-child
-          padding-right: 0
-
   figure.highlight
     padding: 0 0.5em
     margin: 0.5em 0
     border-radius: 0.3em
     overflow: auto
-    // background-color: block-bg-color
-    position relative
+    position: relative
     table
       position relative
       margin: 0
@@ -282,39 +41,38 @@
       width: 100%
       border-collapse: collapse
     .gutter
-      width: 10px;
-      color: #d0d0d0;
+      width: 10px
+      color: var(--hight-gutter)
+      padding: 0
+    .code
+      padding: 0
     pre
-      font-family: block-font-family
-      font-size: block-font-size
+      background: var(--highlight-background)
       margin: 0
-      padding: 0.2em
-      code
-        font-family: block-font-family
-        border-width: 0;
-        border-radius: 0;
-        padding: 0;
-        font-weight: 400;
-        color: inherit;
-        font-size: inherit;
-        font-family: inherit;
-        line-height: inherit;
-        &::before
-          content: none
-        &::after
-          content: none
-  code
-    font-family: block-font-family
-    color: var(--fg-deep)
-    font-weight: 600
-    font-size: 0.875em
-    &::before
-      content: "`"
-    &::after
-      content: "`"
 
-
-
-
-
-
+  pre
+    padding: 10px
+    overflow: auto
+    background: var(--highlight-background)
+    color: var(--highlight-foreground)
+    font-family: Menlo, Monaco, Consolas, Courier New, monospace
+    code
+      padding: 0
+    .comment
+      color: var(--highlight-comment)
+    .string
+      color: var(--highlight-string)
+    .keyword, .doctag
+      color: var(--highlight-keyword)
+    .class_
+      color: var(--highlight-class)
+    .function_
+      color: var(--highlight-function)
+    .tag>.name
+      color: var(--prism-builtin)
+    .attr
+      color: var(--prism-property)
+    .meta
+      color: var(--prism-decorator)
+    .params
+      color: var(--prism-decorator)

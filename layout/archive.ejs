@@ -1,18 +1,36 @@
-<div class="posts">
+<section class="px-6 max-w-prose mx-auto gap-12 grid grid-cols-1">
+  <div class="flex flex-col h-48 items-center justify-center">
+    <h1 class="site-title text-4xl leading-relaxed">
+      <%= config.title %>
+    </h1>
+    <p class="text-gray-500 mt-2">
+      <%= config.subtitle %>
+    </p>
+  </div>
   <% var last_year = ''; %>
-  <ul>
-    <% page.posts.each(function (post) { %>
+  <% page.posts.each(function (post) { %>
     <% var cur_year = post.date.year(); %>
     <% if(last_year !== cur_year){ %>
-      <h2><%- cur_year %></h2>
+      <div class="relative pointer-events-none">
+        <span class="text-9xl opacity-10 absolute -left-11 -top-6 font-bold"><%- cur_year %></span>
+      </div>
     <% last_year = cur_year; } %>
-    <a href="<%- url_for(post.path) %>" class="item">
-      <li>
-        <div class="title"><%= post.title %></div>
-        <div class="time"><%- date(post.date, "YYYY-MM-DD HH:MM") %></div>
-      </li>
+    <a href="<%- url_for(post.path) %>">
+      <header>
+        <h2 class="font-bold text-xl">
+          <%- post.title %>
+        </h2>
+      </header>
+      <section class="text-gray-400 my-1">
+        <p class="line-clamp-4">
+          <% if (post.excerpt) { %>
+            <%= post.excerpt %>
+          <% } %>
+        </p>
+        <p class="line-clamp-4">
+          <%- date(post.date, 'MMM DD') %>
+        </p>
+      </section>
     </a>
-    <% }) %>
-  </ul>
-  <%- partial('_partial/paginator') %>
-</div>
+  <% }) %>
+</section>

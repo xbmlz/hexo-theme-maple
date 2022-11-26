@@ -3,13 +3,13 @@
 </p>
 
 <p align='center'>
-concise but not simple hexo theme
+一款简约而不简单的HEXO主题
 </p>
 
 <br>
 
 <p align='center'>
-<a href="https://xbmlz.github.io">Live Demo</a>
+<a href="https://xbmlz.github.io">演示站点</a>
 </p>
 
 <p align='center'>
@@ -28,8 +28,10 @@ concise but not simple hexo theme
 - ⚗️ [MathJax 支持](http://docs.mathjax.org/en/latest/)
 - ⚡️ [Mermaid 支持](https://mermaid-js.github.io/mermaid)
 - 🖼️ [Fancybox 支持](https://fancyapps.com/docs/ui/fancybox)
-- 🦜 [Disqusjs 支持](https://github.com/SukkaW/DisqusJS)
+- 🦜 [Giscus Support](https://giscus.app/zh-CN)
 - 📊 [ECharts 支持](https://echarts.apache.org/)
+
+![maple](https://cdn.jsdelivr.net/gh/xbmlz/static@main/img/Maple.png)
 
 ## 安装
 
@@ -42,7 +44,7 @@ git clone https://github.com/xbmlz/hexo-theme-maple.git themes/maple
 
 ## 开启
 
-Modify `theme` setting in `_config.yml` to `maple`.
+修改 `theme` setting in `_config.yml` to `maple`.
 
 ```diff
 _config.yml
@@ -95,19 +97,14 @@ mermaid:
   # Available themes: default | dark | forest | neutral
   theme: default
 
-# disqusjs
-disqusjs:
-  enable: false
-  api:
-  apikey:
-  shortname:
+# giscus
+giscus:
+  enable: true
+  repo:
+  repo_id:
+  category:
+  category_id:
+  mapping:
 ```
-## 截图
 
-![light](https://cdn.jsdelivr.net/gh/xbmlz/static@main/img/202207201507443.png)
 
-![dark](https://cdn.jsdelivr.net/gh/xbmlz/static@main/img/202207201507612.png)
-
-![light-m](https://cdn.jsdelivr.net/gh/xbmlz/static@main/img/202207201508341.png)
-
-![dark-m](https://cdn.jsdelivr.net/gh/xbmlz/static@main/img/202207201508877.png)

@@ -1,0 +1,29 @@
+@import 'post.styl'
+
+
+:root
+  --c-bg: #ffffff
+  --c-scrollbar: #d9d9d9
+  --c-scrollbar-hover: #bbbbbb
+
+html.dark
+  --c-bg: #212121
+  --c-scrollbar: #333333
+  --c-scrollbar-hover: #555555
+
+a:hover
+  color: #de7441
+
+::-webkit-scrollbar-track {
+    background-color: var(--c-bg);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--c-scroll);
+    border-radius: 4px;
+}

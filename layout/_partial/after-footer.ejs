@@ -1,27 +1,3 @@
-<script>
-  (function() {
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-    const setting = localStorage.getItem('hexo-color-scheme') || 'auto'
-    if (setting === 'dark' || (prefersDark && setting !== 'light'))
-      document.documentElement.classList.toggle('dark', true)
-  })()
-</script>
-<%# jquery %>
-<%- js('js/jquery-3.4.1.min.js') %>
-<%- js('js/index.js') %>
-<%# iconify %>
-<%- js('js/iconify.min.js') %>
-<%# theme %>
-<%- partial('_plugins/theme') %>
-<%# tocbot %>
-<%- js('lib/tocbot/tocbot.min.js') %>
-<%- partial('_plugins/tocbot') %>
-<%# disqusjs %>
-<%- partial('_plugins/disqusjs') %>
-<%# mathjax %>
 <%- partial('_plugins/mathjax') %>
-<%# mermaid %>
 <%- partial('_plugins/mermaid') %>
-<%# fancybox %>
 <%- partial('_plugins/fancybox') %>
-
