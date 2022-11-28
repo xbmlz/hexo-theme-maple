@@ -1,4 +1,8 @@
-<article class="px-6 max-w-prose mx-auto md:px-0">
+<!-- toc -->
+<% if (toc(page.content).length !== 0) { %>
+  <%- partial('_partial/toc') %>
+<% } %>
+<section class="px-6 max-w-prose mx-auto md:px-0">
   <!-- header -->
   <header class="overflow-hidden pt-6 pb-6 md:pt-12">
     <div class="pt-4 md:pt-6">
@@ -10,27 +14,50 @@
       </p>
       <div>
         <section class="flex items-center gap-3 text-sm">
-          <time><%- date(page.date, "YYYY-MM-DD HH:mm:ss") %></time>
+          <time><%- date(page.updated, "YYYY-MM-DD HH:mm:ss") %></time>
+          <span class="text-gray-400">·</span>
+          <span><%= min2read(page.content) %> min</span>
+          <span class="text-gray-400">·</span>
+          <span><%= wordcount(page.content) %> words</span>
         </section>
       </div>
     </div>
   </header>
   <!-- content -->
-  <article class="mt-10 prose dark:prose-invert post-content">
+  <article class="post-content mt-10 prose dark:prose-invert post-content">
     <%- page.content %>
   </article>
   <!-- tag -->
   <div class="mt-12 pt-6 border-t border-gray-200">
-    <span class="bg-gray-100 dark:bg-gray-700 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-      <% if (page.tags && page.tags.length) { %>
-        <% page.tags.forEach(function (tag) { %>
+    <% if (page.tags && page.tags.length) { %>
+      <% page.tags.forEach(function (tag) { %>
+        <span class="bg-gray-100 dark:bg-gray-700 px-2 py-1 m-1 text-sm rounded-md transition-colors hover:bg-gray-200">
           <a href="<%- url_for(tag.path) %>"><%- tag.name %></a>
-        <% }); %>
+        </span>
+      <% }); %>
+    <% } %>
+  </div>
+  <!-- prev and next -->
+  <div class="flex justify-between mt-12 pt-6 border-t border-gray-200">
+    <div>
+      <% if (page.prev) { %>
+        <a href="<%- url_for(page.prev.path) %>" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
+          <iconify-icon width="20" icon="ri:arrow-left-s-line" data-inline="false"></iconify-icon>
+          <%- page.prev.title %>
+        </a>
       <% } %>
-    </span>
+    </div>
+    <div>
+      <% if (page.next) { %>
+        <a href="<%- url_for(page.next.path) %>" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
+          <%- page.next.title %>
+          <iconify-icon width="20" icon="ri:arrow-right-s-line" data-inline="false"></iconify-icon>
+        </a>
+      <% } %>
+    </div>
   </div>
   <!-- comment -->
   <div class="article-comments mt-12">
     <%- partial('_plugins/giscus') %>
   </div>
-</article>
+</section>

@@ -1,8 +1,8 @@
 # Header
 nav:
   Posts: /archives
-  Categories: /category
-  Tags: /tag
+  # Categories: /category
+  # Tags: /tag
 
 # favicon
 favicon: /favicon.png
@@ -13,9 +13,9 @@ logo: /images/logo.svg
 # links
 links:
   Github: https://github.com/xbmlz
-  ZhiHu: https://github.com/xbmlz
-  Twitter: https://github.com/xbmlz
-  Weibo: https://github.com/xbmlz
+  # ZhiHu:
+  # Twitter:
+  # Weibo:
 
 # analytics
 google_analytics:
@@ -41,12 +41,12 @@ mermaid:
 
 # giscus
 giscus:
-  enable: true
-  repo: xbmlz/maple-giscus
-  repo_id: R_kgDOIgC6Zg
-  category: General
-  category_id: DIC_kwDOIgC6Zs4CSwIE
-  mapping: pathname
+  enable:
+  repo:
+  repo_id:
+  category:
+  category_id:
+  mapping:
 
 
 
