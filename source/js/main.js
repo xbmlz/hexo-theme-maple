@@ -137,7 +137,9 @@ function registerCopyCode() {
 
 $(document).ready(function () {
   registerMobileMenu();
-  registerHeaderPageTitle();
   registerGoTop();
-  registerCopyCode();
+  if ($("#article-title").length > 0) {
+    registerHeaderPageTitle();
+    registerCopyCode();
+  }
 });
