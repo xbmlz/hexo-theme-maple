@@ -4,11 +4,11 @@
   <%- partial('_partial/head',{cache: true}) %>
 </head>
 <body class="font-sans bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200">
-  <%- partial('_partial/header', null, {cache: true}) %>
+  <%- partial('_partial/header', {cache: true}) %>
   <main class="p-12">
     <%- body %>
   </main>
-  <%- partial('_partial/footer', null, {cache: true}) %>
+  <%- partial('_partial/footer', {cache: true}) %>
   <iconify-icon class="fixed right-4 bottom-10 z-100 opacity-0" width="24" icon="ion:arrow-up-c" id="go-top"></iconify-icon>
   <%- partial('_partial/after-footer') %>
 </body>
