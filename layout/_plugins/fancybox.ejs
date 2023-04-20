@@ -5,7 +5,7 @@
       $(this).find('img').each(function(){
         if ($(this).parent().hasClass('fancybox') || $(this).parent().is('a')) return;
         var alt = this.alt;
-        if (alt) $(this).after('<span class="fancybox-alt">' + alt + '</span>');
+        //if (alt) $(this).after('<span class="fancybox-alt">' + alt + '</span>');
         $(this).wrap('<a class="fancybox-img" href="' + this.src + '" data-fancybox=\"gallery\" data-caption="' + alt + '"></a>')
       });
       $(this).find('.fancybox').each(function(){
