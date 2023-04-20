@@ -16,6 +16,9 @@
     "source",
     "_config.yml"
   ],
+  "scripts": {
+    "release": "bumpp --commit --tag --push && npm publish"
+  },
   "dependencies": {
     "bumpp": "^9.1.0"
   }
