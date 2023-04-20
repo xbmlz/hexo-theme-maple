@@ -48,5 +48,10 @@ giscus:
   category_id:
   mapping:
 
+# maple
+maple:
+  enable: true
+  count: 10
+  speed: 1
 
 
