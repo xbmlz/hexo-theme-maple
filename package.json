@@ -1,7 +1,7 @@
 {
   "name": "hexo-theme-maple",
   "version": "0.0.9",
-  "description": "Hexo Theme Maple",
+  "description": "It is concise but not simple. 一款简约而不简单的Hexo主题",
   "repository": "xbmlz/hexo-theme-maple",
   "keywords": [
     "hexo",
@@ -15,5 +15,8 @@
     "scripts",
     "source",
     "_config.yml"
-  ]
+  ],
+  "dependencies": {
+    "bumpp": "^9.1.0"
+  }
 }
