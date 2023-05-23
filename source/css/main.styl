@@ -1,10 +1,11 @@
 @import 'highlight.styl'
 
 
-:root
+:root {
   --c-bg: #ffffff
   --c-scrollbar: #d9d9d9
   --c-scrollbar-hover: #bbbbbb
+}
 
 html.dark
   --c-bg: #212121
@@ -15,16 +16,35 @@ a:hover
   color: #de7441
   cursor: pointer
 
-::-webkit-scrollbar-track {
-    background-color: var(--c-bg);
-}
+::-webkit-scrollbar-track
+  background-color: var(--c-bg);
 
-::-webkit-scrollbar {
+
+::-webkit-scrollbar
   width: 6px;
   height: 6px;
-}
 
-::-webkit-scrollbar-thumb {
+
+::-webkit-scrollbar-thumb
     background-color: var(--c-scroll);
     border-radius: 4px;
-}
+
+.maple
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0px;
+  left: 0px;
+  background-image: url(../img/logo.svg);
+  background-size: cover;
+  will-change: transform;
+
+
+@keyframes fall
+  0%
+    transform: translate(0px, 0px);
+
+  100%
+    transform: translate(calc(100vw * var(--maple-fall-offset)), var(--maple-fall-height));
+
+

@@ -12,7 +12,7 @@ const echartsMaps = (args, content) => {
   let width = options.width || '85%';
   return `
   <div id="${id}" style="width: ${width}; height: ${height}px; margin: 0 auto"></div>
-  <script src="https://cdn.staticfile.org/echarts/5.3.3/echarts.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.3.3/dist/echarts.min.js"></script>
   <script>
     var myChart = echarts.init(document.getElementById('${id}'));
     var option = ${options};
