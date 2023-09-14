@@ -17,6 +17,7 @@
 ></script>
 <script>
   window.onload = function () {
+    console.log("giscus loaded");
     const isDark = document.documentElement.classList.contains("dark");
     const giscusFrame = document.querySelector("iframe.giscus-frame");
     giscusFrame.contentWindow.postMessage(
