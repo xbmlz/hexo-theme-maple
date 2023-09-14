@@ -8,23 +8,25 @@
     </p>
   </div>
   <% var last_year = ''; %>
-  <% page.posts.each(function (post) { %>
+  <% page.posts.each(function (post, index) { %>
     <% var cur_year = post.date.year(); %>
     <% if(last_year !== cur_year){ %>
       <div class="relative pointer-events-none">
         <span class="text-9xl opacity-10 absolute -left-11 -top-6 font-bold"><%- cur_year %></span>
       </div>
     <% last_year = cur_year; } %>
-    <a href="<%- url_for(post.path) %>">
+    <a style="<%- '--stagger:' + index %>" href="<%- url_for(post.path) %>" data-animate>
       <header>
         <h2 class="font-bold text-xl">
           <%- post.title %>
         </h2>
       </header>
-      <section class="text-gray-400 my-1 text-sm time">
+      <section class="text-gray-400 my-2 text-sm time">
         <p class="line-clamp-4">
           <% if (post.excerpt) { %>
-            <%= post.excerpt %>
+            <div class="py-2">
+              <%- post.excerpt %>
+            </div>
           <% } %>
         </p>
         <p class="line-clamp-4">

@@ -5,29 +5,47 @@
 <% if (toc(page.content).length !== 0) { %>
   <%- partial('_partial/toc') %>
 <% } %>
-<section class="px-6 max-w-prose mx-auto md:px-0">
+<section class="px-6 max-w-prose prose mx-auto md:px-0">
   <!-- header -->
   <header class="overflow-hidden pt-6 pb-6 md:pt-12">
     <div class="pt-4 md:pt-6">
       <h1 id="article-title" class="text-[2rem] font-bold leading-snug mb-4 md:mb-6 md:text-[2.6rem]">
         <%- page.title %>
       </h1>
-      <p class="mb-6">
-        <%- page.excerpt %>
-      </p>
       <div>
         <section class="flex items-center gap-3 text-sm">
-          <time><%- date(page.updated, "YYYY-MM-DD HH:mm:ss") %></time>
+          <span class="flex items-center gap-1">
+            <iconify-icon width="18" icon="carbon-calendar" ></iconify-icon>
+            <time><%- date(page.updated, "YYYY-MM-DD") %></time>
+          </span>
           <span class="text-gray-400">·</span>
-          <span><%= min2read(page.content) %> min</span>
+          <span class="flex items-center gap-1">
+            <iconify-icon width="18" icon="ic:round-access-alarm" ></iconify-icon>
+            <span><%= min2read(page.content) %> min</span>
+          </span>
           <span class="text-gray-400">·</span>
-          <span><%= wordcount(page.content) %> words</span>
+          <span class="flex items-center gap-1">
+            <iconify-icon width="18" icon="icon-park-outline:font-search" ></iconify-icon>
+            <span><%= wordcount(page.content) %> words</span>
+          </span>
+          <% if (page.categories && page.categories.length) { %>
+            <span class="text-gray-400">·</span>
+            <span class="flex items-center gap-1">
+              <iconify-icon width="16" icon="icon-park-outline:box" class="mr-2"></iconify-icon>
+              <%- list_categories(page.categories, {
+                show_count: false,
+                class: 'article-category',
+                style: 'none',
+                separator: '/'
+              }) %>
+            </span>
+          <% } %>
         </section>
       </div>
     </div>
   </header>
   <!-- content -->
-  <article class="post-content mt-10 prose dark:prose-invert post-content">
+  <article class="post-content prose m-auto slide-enter-content mt-10 dark:prose-invert">
     <%- page.content %>
   </article>
   <!-- tag -->

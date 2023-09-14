@@ -47,21 +47,22 @@ function registerHeaderPageTitle() {
 
 // go top
 function registerGoTop() {
+  const THRESHOLD = 50;
+  const $top = $('.back-to-top');
   $(window).scroll(function () {
-    if ($(window).scrollTop() > 200) {
-      $("#go-top")
-        .css("opacity", "1")
-        .css("transform", "translateX(0) rotate(0)")
-        .css("transition", "all 0.3s");
-    } else {
-      $("#go-top")
-        .css("opacity", "0")
-        .css("transform", "translateX(50px) rotate(180deg)")
-        .css("transition", "all 0.3s");
-    }
+    $top.toggleClass('back-to-top-on', window.pageYOffset > THRESHOLD);
+    const scrollTop = $(window).scrollTop();
+    const docHeight = $('#content').height();
+    const winHeight = $(window).height();
+    const contentVisibilityHeight = (docHeight > winHeight) ? (docHeight - winHeight) : ($(document).height() - winHeight);
+    const scrollPercent = (scrollTop) / (contentVisibilityHeight);
+    const scrollPercentRounded = Math.round(scrollPercent*100);
+    const scrollPercentMaxed = (scrollPercentRounded > 100) ? 100 : scrollPercentRounded;
+    $('#scrollpercent>span').html(scrollPercentMaxed);
   });
-  $("#go-top").click(function () {
-    $("html,body").animate({ scrollTop: 0 }, 500);
+
+  $top.on('click', function () {
+    $('body').velocity('scroll');
   });
 }
 
@@ -69,7 +70,7 @@ function registerGoTop() {
 function registerCopyCode() {
   $("figure.highlight").each(function () {
     const copyIcon = $(
-      "<iconify-icon id='copy-icon' width='20' icon='carbon:copy'></iconify-icon>"
+      "<iconify-icon id='copy-icon' width='18' icon='carbon:copy'></iconify-icon>"
     );
     const leftOffset = 25;
     // left

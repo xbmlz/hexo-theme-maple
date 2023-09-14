@@ -3,15 +3,20 @@
 <head>
   <%- partial('_partial/head',{cache: true}) %>
 </head>
-<body class="font-sans bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200">
+<body class="font-sans text-gray-700 dark:text-gray-200 relative">
   <%- partial('_partial/header', {cache: true}) %>
-  <main class="p-12">
+  <main class="pt-14">
     <%- body %>
   </main>
   <%- partial('_partial/footer', {cache: true}) %>
-  <iconify-icon class="fixed right-4 bottom-10 z-100 opacity-0" width="24" icon="ion:arrow-up-c" id="go-top"></iconify-icon>
+  <div class="back-to-top box-border fixed right-6 z-1024 -bottom-20 rounded py-1 px-1 bg-slate-900 opacity-60 text-white cursor-pointer text-center transition-bottom">
+    <span class="flex justify-center items-center text-sm">
+      <iconify-icon width="18" icon="ion:arrow-up-c" id="go-top"></iconify-icon>
+      <span id="scrollpercent"><span>0</span> %</span>
+    </span>
+  </div>
   <%- partial('_partial/after-footer') %>
-  <div class="w-screen h-screen -z-999" id="maple"></div>
+  <div class="fixed top-0 bottom-0 left-0 right-0 pointer-events-none print:hidden" id="maple"></div>
 </body>
 
 </html>
