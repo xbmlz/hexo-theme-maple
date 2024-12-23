@@ -16,9 +16,6 @@ how to add a category page:
  %>
 
 <% if(is_category()){ %>
-<div class="">
-  <h2>Categories-<%-page.category%></h2>
-</div>
 <%- partial('archive', {pagination: config.category, index: true}) %>
 <% } else { %>
 <div class="px-6 max-w-prose mx-auto md:px-0 mt-6">

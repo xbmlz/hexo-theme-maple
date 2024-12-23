@@ -15,9 +15,6 @@ how to add a tag page:
     ---
  %>
 <% if(is_tag()){ %>
-  <div>
-    <h2>Tag - <%-page.tag%></h2>
-  </div>
   <%- partial('archive', {pagination: config.tag, index: true}) %>
 <% } else { %>
   <div class="px-6 max-w-prose mx-auto md:px-0 mt-6">
